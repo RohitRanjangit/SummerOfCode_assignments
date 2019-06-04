@@ -1,0 +1,38 @@
+html{
+	background-color:#E0FFFF;
+}
+h1{
+	color:red;
+	text-align:center;
+	margin:150px 0px 0px 0px;
+}
+h2{
+	color:blue;
+	float:right;
+}
+b{
+	color:black;
+}
+body{
+	text-align: center;
+}
+
+iframe{
+	width :600px;
+	height:400px;
+	background-color:white;
+	/*resize: both;*/
+	
+}
+input{
+	background-color: pink;
+	border-color: pink;
+	border-radius: 1;
+}
+@media screen {
+	.size{
+		width:40%;
+		
+	}
+}
+

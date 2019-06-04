@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sub-window</title>
+	<link href = "styles/style.css" rel="stylesheet">
+
+</head>
+<body>
+	<h1>My First Sub-window</h1>
+		<iframe class="size" id="iframe" scrolling="yes" src = "https://www.google.com/webhp?igu=1"></iframe><br>
+	<br>
+
+	<span>
+		<input type = "text"  id="url">
+		<button>GO</button>
+	</span>
+	<br><br>
+	<input type = "button" onclick='setUrl("https://www.iitk.ac.in/")' value = "iitk">
+	<input type = "button" onclick='setUrl("https://www.iitk.ac.in/doaa/")' value ="doaaIITK">
+	<input type = "button" onclick='setUrl("https://www.wikipedia.org/")' value="wiki">
+	<input type = "button" onclick='setUrl("https://webmail.iitk.ac.in/")' value="IITKwebmail">
+	<input type = "button" onclick='setUrl("https://www.youtube.com/")' value="youtube">
+	<br><br><br><br><br><br><br><br><br><br>
+	<h2>This Window is Created By <b>Rohit Ranjan</b></h2>
+
+<script>
+		var iframe = document.getElementById("iframe");
+		function setUrl(str){
+			iframe.setAttribute("src",str);
+		}
+		document.querySelector("button").onclick=function setUrlText(){
+			var url = document.getElementById("url").value;
+			if(url)setUrl(url);
+			else{
+				setUrl("https://www.google.com/webhp?igu=1");
+			}
+		}
+		var width = screen.width;
+		var height = screen.height;
+		console.log(width,height);
+		iframe.setAttribute("width",width/3);
+		iframe.setAttribute("height",height/2.3);
+
+
+
+		function resizeIFrameToFitContent( iFrame ) {
+
+		    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+		    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+		}
+
+		window.addEventListener('DOMContentLoaded', function(e) {
+
+		    var iFrame = document.getElementById( 'iFrame1' );
+		    resizeIFrameToFitContent( iFrame );
+
+		    
+		} );
+
+
+
+
+</script>
+</body>
+</html>
